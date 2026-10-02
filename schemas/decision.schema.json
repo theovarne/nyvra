@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyvra:schema:decision:1",
+  "title": "NYVRA decision result v1",
+  "type": "object", "additionalProperties": false,
+  "required": ["decision", "observationHash", "policyHash"],
+  "properties": {
+    "decision": { "enum": ["HOLD", "STRIKE"] },
+    "observationHash": { "type": "string", "pattern": "^0x[0-9a-f]{64}$" },
+    "policyHash": { "type": "string", "pattern": "^0x[0-9a-f]{64}$" }
+  }
+}

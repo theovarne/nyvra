@@ -1,0 +1,12 @@
+import { writeFileSync } from 'node:fs';
+import { generateHistory } from '../build/simulator/blocks.js';
+const history = generateHistory(30, 0);
+const write = (path, data) => writeFileSync(path, JSON.stringify(data, null, 2) + '\n');
+write('simulator/fixtures/sample-history.json', history);
+write('examples/hold-transition.json', history[0]);
+write('examples/strike-transition.json', history.find(t => t.decision === 'STRIKE'));
+const invalid = structuredClone(history[0]);
+invalid.policyHash = '0x' + '0'.repeat(64);
+invalid.proof.valid = false;
+write('examples/invalid-transition.json', invalid);
+console.log('Generated 30 deterministic transitions and HOLD, STRIKE, invalid examples.');

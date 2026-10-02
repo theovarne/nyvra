@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyvra:schema:observation:1",
+  "title": "NYVRA simulation observation v1",
+  "type": "object", "additionalProperties": false,
+  "required": ["id", "sequence", "timestamp", "source", "state", "stateHash"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^obs-[0-9]{6,}$" },
+    "sequence": { "type": "integer", "minimum": 1, "maximum": 9007199254740991 },
+    "timestamp": { "type": "integer", "minimum": 0, "maximum": 8640000000000000 },
+    "source": { "const": "SIMULATION" },
+    "stateHash": { "type": "string", "pattern": "^0x[0-9a-f]{64}$" },
+    "state": {
+      "type": "object", "additionalProperties": false, "required": ["score", "signal", "seed"],
+      "properties": {
+        "score": { "type": "integer", "minimum": 0, "maximum": 999999 },
+        "signal": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "seed": { "type": "integer", "minimum": 0, "maximum": 4294967295 }
+      }
+    }
+  }
+}

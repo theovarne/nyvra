@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyvra:schema:proof:1",
+  "title": "NYVRA simulation proof envelope v1",
+  "description": "Public checksum only. A true valid field is not sufficient evidence of validity.",
+  "type": "object", "additionalProperties": false,
+  "required": ["scheme", "version", "transitionHash", "proofHash", "valid"],
+  "properties": {
+    "scheme": { "const": "SIMULATION" }, "version": { "const": 1 },
+    "transitionHash": { "type": "string", "pattern": "^0x[0-9a-f]{64}$" },
+    "proofHash": { "type": "string", "pattern": "^0x[0-9a-f]{64}$" },
+    "valid": { "type": "boolean" }
+  }
+}

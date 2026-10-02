@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "id": "block-000020",
+  "sequence": 20,
+  "timestamp": 1790813040000,
+  "previousHash": "0xeac9d09ecec5e881d52941535e8999fef3ddf1b22ebcb05bebcda1827ef0abc5",
+  "decision": "STRIKE",
+  "observationHash": "0xe9c9202e880aeccf13e9e45f11a9edc061c2ce2e4aae4bbf41b71ec96329c5ce",
+  "policyHash": "0xcd6f28b620bb4bb6e422453ee845f7b7861e895fe5213c31deaeb8516c110335",
+  "observation": {
+    "id": "obs-000020",
+    "sequence": 20,
+    "timestamp": 1790813040000,
+    "source": "SIMULATION",
+    "state": {
+      "score": 995,
+      "signal": "quiet order flow",
+      "seed": 0
+    },
+    "stateHash": "0xc6eec27a3d9d09523c7a18d495dfe636d798952b5339a6d97cda7a10b3dc66db"
+  },
+  "transitionHash": "0x5800620f5e3ca72a8ad51dfe79775c78f0461464a9c336a77d1b164edaabf58a",
+  "proof": {
+    "scheme": "SIMULATION",
+    "version": 1,
+    "transitionHash": "0x5800620f5e3ca72a8ad51dfe79775c78f0461464a9c336a77d1b164edaabf58a",
+    "proofHash": "0x54a6ff7e4c6bd1136d697cd950881b6289e26bef90a597174686f9c0d8a8ac3a",
+    "valid": true
+  },
+  "blockHash": "0xc210c74d19c0a191b4c2ad2aca2833951c3a196a4b4bda9937d8653a39ee3015"
+}

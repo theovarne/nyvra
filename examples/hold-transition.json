@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "id": "block-000001",
+  "sequence": 1,
+  "timestamp": 1790812812000,
+  "previousHash": null,
+  "decision": "HOLD",
+  "observationHash": "0xc3a9b3092ae0bfed1b3f1796698ca4d1f5a6ccc4711de556c39d20d9c80be66c",
+  "policyHash": "0xcd6f28b620bb4bb6e422453ee845f7b7861e895fe5213c31deaeb8516c110335",
+  "observation": {
+    "id": "obs-000001",
+    "sequence": 1,
+    "timestamp": 1790812812000,
+    "source": "SIMULATION",
+    "state": {
+      "score": 54,
+      "signal": "market volatility detected",
+      "seed": 0
+    },
+    "stateHash": "0x65dafd0ab413c1d1c84a8df35ab0f74d6d12c7b5db3ed8869199d0bdb5d926c3"
+  },
+  "transitionHash": "0xd93df279571c7a9f5040d9221501f89dcc4c72019115944df376350891528700",
+  "proof": {
+    "scheme": "SIMULATION",
+    "version": 1,
+    "transitionHash": "0xd93df279571c7a9f5040d9221501f89dcc4c72019115944df376350891528700",
+    "proofHash": "0x0f28b60aab6452be0b7fb6f787134ddc9359ec41152ce08bb445d620488feda5",
+    "valid": true
+  },
+  "blockHash": "0xe84fd60ebc7604a8e3a365b004b97fed6511e987e5c781af87c44139a87e42e6"
+}

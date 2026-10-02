@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyvra:schema:transition:1",
+  "title": "NYVRA simulation transition v1",
+  "description": "Shape validation only. Use validateTransition with a trusted policy and predecessor to validate semantics.",
+  "type": "object", "additionalProperties": false,
+  "required": ["version", "id", "sequence", "timestamp", "previousHash", "observation", "observationHash", "policyHash", "decision", "transitionHash", "proof", "blockHash"],
+  "properties": {
+    "version": { "const": 1 },
+    "id": { "type": "string", "pattern": "^block-[0-9]{6,}$" },
+    "sequence": { "type": "integer", "minimum": 1, "maximum": 9007199254740991 },
+    "timestamp": { "type": "integer", "minimum": 0, "maximum": 8640000000000000 },
+    "previousHash": { "anyOf": [{ "type": "null" }, { "type": "string", "pattern": "^0x[0-9a-f]{64}$" }] },
+    "observation": { "$ref": "urn:nyvra:schema:observation:1" },
+    "observationHash": { "type": "string", "pattern": "^0x[0-9a-f]{64}$" },
+    "policyHash": { "type": "string", "pattern": "^0x[0-9a-f]{64}$" },
+    "decision": { "$ref": "urn:nyvra:schema:decision:1#/properties/decision" },
+    "transitionHash": { "type": "string", "pattern": "^0x[0-9a-f]{64}$" },
+    "proof": { "$ref": "urn:nyvra:schema:proof:1" },
+    "blockHash": { "type": "string", "pattern": "^0x[0-9a-f]{64}$" }
+  }
+}
